@@ -1,12 +1,13 @@
 <!-- 3. Pintando la variable valorContador -->
-<h1>Contador:</h1>
-<p>{{valorContador}}</p>
+<!-- <h1>Contador:</h1>
+<p>{{valorContador}}</p> -->
 
+<!-- ------------------------------------------------- -->
 <!-- 4. Creamos los botones -->
-<!-- --------------------------------------------- -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <!-- 8. Creando el 'binding' de los botones -->
-<button (click)="incrementar()" >Incrementar</button>
-<button (click)="decrementar()" >Decrementar</button>
+<!-- <button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button> -->
 
 <!-- --------------------------------------------- -->
 
@@ -14,5 +15,21 @@
 <!-- ir a padre.component.ts -->
 
 <!-- -------------------------------------------- -->
-<!-- llamando al hijo en el padre y pasando datos del padre al hijo -->
-<!-- <app-hijo [datoHijo]="datoPadre" (eventoHijo)="manejadorDeEventoDelPadre($event)" ></app-hijo> -->
+<!-- 9. LLAMANDO AL HIJO EN EL PADRE Y PASANDO DATOS DEL PADRE AL HIJO -->
+<!-- <app-hijo [recibeHijo]="mensajePadre"></app-hijo> -->
+
+<!-- 9.1 ir a padre.component.ts y crear un 'mensajePadre'-->
+
+<!-- ----------------------------------------------------------------- -->
+<!-- 10.3 Pintando el  mensaje recibido del hijo-->
+<!-- <app-hijo></app-hijo> -->
+<!-- <h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5> -->
+
+<!-- 10.4 Crear la comunicación entre el padre y el hijo -->
+<!-- ir a hijo.component.ts -->
+
+<!-- 10.14 Reemplazando el paso 10.3 -->
+<app-hijo (mensajeDesdeHijo)="recibirMensaje($event)"></app-hijo>
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5>
+
+<!-- 11. COMUNICANDO DE PADRE A HIJO INCREMENTANDO EL VALOR -->

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,11 @@ import { HijoComponent } from './hijo/hijo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    //10.10 Importando 'FormsModule' y volver a hijo.component.html
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,26 @@
-<h1>Yo soy el hijo</h1>
+<!-- 9.6 Pintando el mensaje enviado-->
+<!-- <h1>El mensaje enviado fue:</h1>
+<p>{{recibeHijo}}</p> -->
+<!-- y probamos -->
+
+<!-- 9.7 ir a padre.component.ts -->
+
+<!-- ----------------------------- -->
+<!-- 10.8 Creando un 'input' para crear el mensaje a enviar desde el hijo al padre-->
+<div>
+   <label for="entrada">Escribe un mensaje para el padre:</label>
+
+   <!-- 10.9 importar 'FormsModule' para que funcione el input-->
+   <!-- ir a app.module.ts -->
+
+   <!-- --- -->
+   <!-- 10.11 Almacenando lo escrito en el 'input' en la variable 'mensaje' del hijo-->
+   <input type="text" id="entrada" [(ngModel)]="mensaje">
+
+   <!-- 10.12 Creando botón para enviar el mensaje introducido en el input hacia el 'padre' -->
+   <button type="button" (click)="enviarMensaje()">Enviar mensaje</button>
+
+   <!-- 10.13 Conectar al hijo con el padre para terminar de enviar el mensaje -->
+   <!-- ir a padre.component.html -->
+
+</div>
