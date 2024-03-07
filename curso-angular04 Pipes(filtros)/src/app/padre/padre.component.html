@@ -1,0 +1,107 @@
+<!-- Pintando la variable valorContador -->
+<!-- <h1>Contador:</h1>
+<p>{{valorContador}}</p> -->
+
+<!-- ------------------------------------------------- -->
+<!-- Creamos los botones -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Creando el 'binding' de los botones -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- pasar los botones de incrementar y decrementar al hijo-->
+<!-- ir a hijo.component.html -->
+
+<!-- <button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button> -->
+
+<!-- --------------------------------------------- -->
+
+<!-- Crear los métodos de clase -->
+<!-- ir a padre.component.ts -->
+
+<!-- -------------------------------------------- -->
+<!-- LLAMANDO AL HIJO EN EL PADRE Y PASANDO DATOS DEL PADRE AL HIJO -->
+<!-- <app-hijo [recibeHijo]="mensajePadre"></app-hijo> -->
+
+<!-- ir a padre.component.ts y crear un 'mensajePadre'-->
+
+<!-- ----------------------------------------------------------------- -->
+<!-- Pintando el  mensaje recibido del hijo-->
+<!-- <app-hijo></app-hijo> -->
+<!-- <h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5> -->
+
+<!-- Crear la comunicación entre el padre y el hijo -->
+<!-- ir a hijo.component.ts -->
+
+<!-- Reemplazando el paso 10.3 -->
+<!-- <app-hijo (mensajeDesdeHijo)="recibirMensaje($event)"></app-hijo>
+
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5> -->
+
+<!-- INCREMENTAR O DECREMENTAR UN VALOR DESDE EL HIJO EN EL PADRE -->
+<!-- ir a línea 10 this.padre.component.html -->
+
+<!-- ---------------------------------------------------------------- -->
+<!-- reemplaza a 10.14 -->
+<!-- <app-hijo 
+(incrementarDesdeHijo)="incrementar()"
+(decrementarDesdeHijo)="decrementar()"
+(mensajeDesdeHijo)="recibirMensaje($event)"
+></app-hijo>
+
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5>
+
+<h1>Contador:</h1>
+<p>{{valorContador}}</p> -->
+
+<!-- Probar -->
+
+<!-- ********************************************************************** -->
+<!-- Creando el botón para saludar al 'hermano' desde el 'padre'-->
+<!-- ---------- -->
+<!-- Aplicando la directiva 'appEstiloHermanos' -->
+<!-- <h1 appEstiloHermanos>{{nombre}}</h1> -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- 1.2 reemplazando la directiva por un 'pipe' en ambos hermanos -->
+<h1>{{ nombre | miPipePersonalizado }}</h1>
+<!-- ------------------------------------------- -->
+<!-- 1.7 Llamando al pipe 'Date' -->
+<!-- <h2>Fecha de hoy: {{ fecha | date }}</h2> -->
+                     <!-- ó -->
+<h2>Fecha de hoy: {{ fecha | date : 'short' }}</h2>
+                     <!-- ó -->
+<!-- 1.8 creando nuesto formato personalizado -->
+<h2>Fecha de hoy: {{ fecha | date : 'dd/MM/yyyy' }}</h2>
+
+<!-- 1.9 utilizando otros pipes de Angular predefinidos (reemplazando el paso 1.2) -->
+<h1>{{ nombre | titlecase}}</h1>
+<h1>{{ nombre | lowercase }}</h1>
+
+<!-- 2 Utilizando un pipe de moneda -->
+<!-- ir a padre.component.ts a crear la variable 'dolar' -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- 2.3 Pintando el pipe de moneda-->
+<h2>Cuanto cotiza el dolar: {{ dolar | currency}}</h2>
+
+<!-- 2.4 Pintando el pipe de moneda con formato personalizado-->
+<h2>Cuanto cotiza el dolar: {{ dolar | currency : 'S/ '}}</h2>
+
+<!-- 2.5 Pintando un pipe que recorte los decimales-->
+<!-- ir a crear su variable y volver -->
+<h2>El numero PI es: {{ pi | number: '1.2-2'  }}</h2>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- 2.8 Pintando el pipe de porcentaje -->
+<h2>El factor es: {{ factor | percent }}</h2>
+
+<!-- ------------------------------------------- -->
+<button type="button" (click)="saludar()">Saludar</button>
+<!-- ---------- -->
+
+<!-- Crear el método 'saludar()' en padre.component.ts-->
+<!-- ir a padre.component.ts -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Creando botón para preguntar por hijo-->
+<button type="button" (click)="preguntar()">Preguntar por hijo</button>
+
+<!-- Crear método 'preguntar()' en padre.component.ts-->
+<!-- ir a padre.component.ts -->
