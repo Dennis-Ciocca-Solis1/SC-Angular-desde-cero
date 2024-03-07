@@ -1,0 +1,39 @@
+<!-- Pintando el mensaje enviado-->
+<!-- <h1>El mensaje enviado fue:</h1>
+<p>{{recibeHijo}}</p> -->
+<!-- y probamos -->
+
+<!-- ir a padre.component.ts -->
+
+<!-- ----------------------------- -->
+<!-- Creando un 'input' para crear el mensaje a enviar desde el hijo al padre-->
+<div>
+	<label for="entrada">Escribe un mensaje para el padre:</label>
+
+	<!-- importar 'FormsModule' para que funcione el input-->
+	<!-- ir a app.module.ts -->
+
+	<!-- --- -->
+	<!-- Almacenando lo escrito en el 'input' en la variable 'mensaje' del hijo-->
+	<input type="text" id="entrada" [(ngModel)]="mensaje" />
+
+	<!-- Creando botón para enviar el mensaje introducido en el input hacia el 'padre' -->
+	<button type="button" (click)="enviarMensaje()">Enviar mensaje</button>
+
+	<!-- Conectar al hijo con el padre para terminar de enviar el mensaje -->
+	<!-- ir a padre.component.html -->
+</div>
+<!-- ------------------------------------------------- -->
+<!--Creando un div para los botones del hijo -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!--ir a hijo.component.ts -->
+<br>
+<div>
+	<!-- Creando o habilitando los botones en el hijo -->
+	<button (click)="incrementar()">Incrementar</button>
+	<button (click)="decrementar()">Decrementar</button>
+<!-- </div> -->
+
+<!-- ------------------------------------------------------------------- -->
+<!-- Habilitar o crear los métodos de los botones, pero en el hijo -->
+<!-- ir a hijo.component.ts -->
