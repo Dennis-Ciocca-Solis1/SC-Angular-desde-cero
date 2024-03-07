@@ -1,0 +1,71 @@
+<!-- Pintando la variable valorContador -->
+<!-- <h1>Contador:</h1>
+<p>{{valorContador}}</p> -->
+
+<!-- ------------------------------------------------- -->
+<!-- Creamos los botones -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Creando el 'binding' de los botones -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- pasar los botones de incrementar y decrementar al hijo-->
+<!-- ir a hijo.component.html -->
+
+<!-- <button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button> -->
+
+<!-- --------------------------------------------- -->
+
+<!-- Crear los métodos de clase -->
+<!-- ir a padre.component.ts -->
+
+<!-- -------------------------------------------- -->
+<!-- LLAMANDO AL HIJO EN EL PADRE Y PASANDO DATOS DEL PADRE AL HIJO -->
+<!-- <app-hijo [recibeHijo]="mensajePadre"></app-hijo> -->
+
+<!-- ir a padre.component.ts y crear un 'mensajePadre'-->
+
+<!-- ----------------------------------------------------------------- -->
+<!-- Pintando el  mensaje recibido del hijo-->
+<!-- <app-hijo></app-hijo> -->
+<!-- <h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5> -->
+
+<!-- Crear la comunicación entre el padre y el hijo -->
+<!-- ir a hijo.component.ts -->
+
+<!-- Reemplazando el paso 10.3 -->
+<!-- <app-hijo (mensajeDesdeHijo)="recibirMensaje($event)"></app-hijo>
+
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5> -->
+
+<!-- INCREMENTAR O DECREMENTAR UN VALOR DESDE EL HIJO EN EL PADRE -->
+<!-- ir a línea 10 this.padre.component.html -->
+
+<!-- ---------------------------------------------------------------- -->
+<!-- reemplaza a 10.14 -->
+<!-- <app-hijo 
+(incrementarDesdeHijo)="incrementar()"
+(decrementarDesdeHijo)="decrementar()"
+(mensajeDesdeHijo)="recibirMensaje($event)"
+></app-hijo>
+
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5>
+
+<h1>Contador:</h1>
+<p>{{valorContador}}</p> -->
+
+<!-- Probar -->
+
+<!-- ********************************************************************** -->
+<!-- 4.7 Creando el botón para saludar al 'hermano' desde el 'padre'-->
+<h1>{{nombre}}</h1>
+<button type="button" (click)="saludar()">Saludar</button>
+
+<!-- 4.8 Crear el método 'saludar()' en padre.component.ts-->
+<!-- ir a padre.component.ts -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- 15.1 Creando botón para preguntar por hijo-->
+<button type="button" (click)="preguntar()">Preguntar por hijo</button>
+
+<!-- 15.2 Crear método 'preguntar()' en padre.component.ts-->
+<!-- ir a padre.component.ts -->
